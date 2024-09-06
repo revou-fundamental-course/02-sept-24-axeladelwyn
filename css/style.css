@@ -1,0 +1,32 @@
+/* Added flex to h1 title */
+body {
+    font-size: 16px;
+    background-color: rgb(221, 189, 189) ;
+}
+header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* center the triangle image */
+.image{
+    display: block;
+    margin: auto;
+}
+#home {
+    text-align: center;
+}
+
+#calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
