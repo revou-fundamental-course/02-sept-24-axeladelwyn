@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css"/>
+    <!-- Added animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Website Title (Triangle Calculator) -->
     <title>Triangle Calculator</title>
 <body>
     <!-- Header -->
     <header>
-        <h1>Triangle Calculator</h1>
+        <h1 class="animate__animated animate__bounce">Welcome to Triangle Calculator!</h1>
+        <p>Terima kasih telah mengunjungi website ini</p>
         <nav>
             <li><a href="#home">Home</a></li>
             <li><a href="#calculator">Calculator</a></li>
@@ -19,10 +22,12 @@
     <main>
         <section id="home">
             <!-- Picture of triangle -->
+            <h2>Area & Perimeter of Triangle</h2>
             <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231010123932/Area-Perimeter-Formula-1.png" alt="Picture of a triangle" loading="lazy" class="image"/>
             <p>Calculate the parameter and area of Triangle:</p>
             <p>A = 1/2 * base * height</p>
-            <p>Dimana b merupakan alas dan h merupakan tinggi.</p>
+            <p>Perimeter = base * 3</p>
+            <p>Dimana base merupakan alas dan height merupakan tinggi.</p>
             
         </section>
         <section id="calculator">
@@ -39,16 +44,25 @@
                     <option value="parameter">Keliling</option>
                 </select>
                 <label for="base">Alas:</label>
-                <input type="number" id="base" name="base" required min=1>
+                <input type="number" id="base" name="base" required min="1">
                 <label for="height">Tinggi:</label>
-                <input type="number" id="height" name="height" required min=1>
-                <button type="submit">Calculate</button>
+                <input type="number" id="height" name="height" required min="1">
+                <button type="submit" id="calculate">Calculate</button>
+                <button type="reset" id="reset">Reset</button>
             </form>
             <p id="result"></p>         
         </section>
-
-        
     </main>
+    <div class="character" id="character1"></div>
+    <div class="character" id="character2"></div>
+    <div class="rainbow-overlay" id="rainbow-overlay"></div>
+    <div id="versus-scene" style="display: none;">
+        <h1>Sub-Zero vs Scorpion</h1>
+        <div class="versus-characters">
+            <div class="character" id="character1"></div>
+            <div class="character" id="character2"></div>
+        </div>
+    </div>
     <!-- Footer at the end of the body -->
     <footer>
         <p>&copy; 2024 Triangle Calculator</p>
