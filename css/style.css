@@ -13,6 +13,35 @@ header h1 {
     justify-content: center;
     align-items: center;
 }
+header p {
+    text-align: center;
+}
+
+nav {
+    border-left: 2px solid #000; /* Adjust the border width and color as needed */
+    padding-left: 10px; /* Optional: Add some padding to separate the text from the border */
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 7vw;
+}
+
+ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    margin: 10px 0; /* Space out list items */
+}
+
+a {
+    text-decoration: none; /* Remove default underline */
+    color: #000; /* Text color for links */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover for better usability */
+}
 
 /* center the triangle image */
 .image {
@@ -85,7 +114,7 @@ footer {
     height: 40px;
     position: absolute; /* Use fixed positioning */
     background-size: cover;
-    background-color: red;
+
 }
 
 /* Character 1 specific styles */
@@ -136,48 +165,10 @@ footer {
     }
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px)
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
 #result {
     display: inline-block;
     font-size: 1em;
     animation: bounce 2s infinite;
-}
-
-.rainbow-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-    background-size: 400% 400%;
-    opacity: 0;
-    pointer-events: none; /* Prevent interaction with the overlay */
-    transition: opacity 1s ease;
-    z-index: 9999; /* Ensure it covers everything */
-}
-
-@keyframes rainbow {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .character:hover {
